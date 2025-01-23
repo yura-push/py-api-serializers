@@ -9,9 +9,27 @@ from cinema.models import (
 )
 from cinema.serializers import (
     ActorSerializer,
+    GenreSerializer,
+    CinemaHallSerializer,
+    MovieSessionSerializer,
 )
 
 
 class ActorViewSet(viewsets.ModelViewSet):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
+
+
+class GenreViewSet(viewsets.ModelViewSet):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+
+class CinemaHallViewSet(viewsets.ModelViewSet):
+    queryset = CinemaHall.objects.all()
+    serializer_class = CinemaHallSerializer
+
+
+class MovieSessionViewSet(viewsets.ModelViewSet):
+    queryset = MovieSession.objects.all()
+    serializer_class = MovieSessionSerializer
