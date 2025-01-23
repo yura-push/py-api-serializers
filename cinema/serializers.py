@@ -28,6 +28,13 @@ class CinemaHallSerializer(serializers.ModelSerializer):
         fields = ["id", "name", "rows", "seats_in_row", "capacity"]
 
 
+class MovieSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Movie
+        fields = ["id", "title", "description", "duration"]
+
+
 class MovieSessionSerializer(serializers.ModelSerializer):
 
     class Meta:
